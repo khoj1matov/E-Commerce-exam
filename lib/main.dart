@@ -12,11 +12,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-   
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       onGenerateRoute: _myRoute.onGenerateRoute,
-      initialRoute: '/sign_in',
+      initialRoute: '/',
     );
   }
 }

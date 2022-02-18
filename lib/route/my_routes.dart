@@ -1,4 +1,5 @@
 import 'package:exam/screens/first_page.dart';
+import 'package:exam/screens/menu.page.dart';
 import 'package:exam/screens/sign_in.dart';
 import 'package:exam/screens/sign_up.dart';
 import 'package:flutter/material.dart';
@@ -14,6 +15,8 @@ class MyRoute {
         return MaterialPageRoute(builder: (_) => const SignUp());
       case '/sign_in':
         return MaterialPageRoute(builder: (_) => const SignIn());
+      case '/menu':
+        return MaterialPageRoute(builder: (_) => const MenuPage());
     }
   }
 }

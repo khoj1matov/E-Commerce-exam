@@ -14,4 +14,7 @@ class ColorConst {
   static Color getStartedButtonColor = const Color(0XFFF6F1FB);
   static Color getStartedPrimaryButtonColor = const Color(0XFF6872EB);
   static Color iHaveTextStyleColor = const Color(0XFFA1A4B2);
+  static Color privasyTextStyleColor = Colors.blueAccent.shade200;
+  static Color HeloAdminTextStyleColor = const Color(0XFF000000);
+  static Color HeloAdminStyleColor = const Color(0XFFFAF8F5);
 }

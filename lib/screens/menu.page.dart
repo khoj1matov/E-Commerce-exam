@@ -1,3 +1,4 @@
+import 'package:exam/core/constants/my_text_style.dart';
 import 'package:flutter/material.dart';
 
 class MenuPage extends StatefulWidget {
@@ -10,6 +11,20 @@ class MenuPage extends StatefulWidget {
 class _MenuPageState extends State<MenuPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+        body: SingleChildScrollView(
+      child: Column(
+        children: [
+          Text(
+            "Menu",
+            style: MyTextStyle.myMenuTextStyle,
+          ),
+          Text(
+            "Helo, Admin",
+            style: MyTextStyle.myHeloAdminTextStyle,
+          ),
+        ],
+      ),
+    ));
   }
 }

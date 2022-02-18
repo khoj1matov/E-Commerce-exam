@@ -1,7 +1,9 @@
 import 'package:exam/core/constants/const_color.dart';
 import 'package:exam/core/constants/font_const.dart';
 import 'package:exam/core/constants/my_text_style.dart';
+import 'package:exam/mock/model.dart';
 import 'package:flutter/material.dart';
+import '../widgets/mymessenger.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({Key? key}) : super(key: key);
@@ -11,9 +13,9 @@ class SignIn extends StatefulWidget {
 }
 
 class _SignInState extends State<SignIn> {
-  final _formkey = GlobalKey<FormState>();
+  bool _check = false;
 
-  final TextEditingController _usernameController = TextEditingController();
+  final _formkey = GlobalKey<FormState>();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
@@ -143,13 +145,26 @@ class _SignInState extends State<SignIn> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 100),
-              child: SizedBox(
-                width: 450,
-                child: Text(
-                  "Save password",
-                  style: MyTextStyle.myIHaveTextStyle,
-                ),
+              padding: const EdgeInsets.only(top: 80),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.8,
+                    child: Text(
+                      "Save password",
+                      style: MyTextStyle.myIHaveTextStyle,
+                    ),
+                  ),
+                  Checkbox(
+                    value: _check,
+                    onChanged: (status) {
+                      setState(() {
+                        _check = !_check;
+                      });
+                    },
+                  ),
+                ],
               ),
             ),
             Padding(
@@ -168,12 +183,24 @@ class _SignInState extends State<SignIn> {
                   "LOG IN",
                   style: MyTextStyle.myGetStartedTextStyle,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  signIn();
+                },
               ),
             ),
           ],
         ),
       ),
     );
+  }
+
+  signIn() {
+    if (Model.email == _emailController.text) {
+      if (Model.password == _passwordController.text) {
+        Navigator.pushReplacementNamed(context, '/menu');
+        return true;
+      }
+    }
+    MyMessenger.showMyMessenger("Username yoki password !", context);
   }
 }

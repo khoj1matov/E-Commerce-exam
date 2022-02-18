@@ -2,6 +2,7 @@ import 'package:exam/core/constants/const_color.dart';
 import 'package:exam/core/constants/font_const.dart';
 import 'package:exam/core/constants/my_text_style.dart';
 import 'package:flutter/material.dart';
+import '../mock/model.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({Key? key}) : super(key: key);
@@ -11,8 +12,9 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
-  final _formkey = GlobalKey<FormState>();
+  bool _check = false;
 
+  final _formkey = GlobalKey<FormState>();
   final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
@@ -156,16 +158,36 @@ class _SignUpState extends State<SignUp> {
             ),
             Padding(
               padding: const EdgeInsets.only(top: 20),
-              child: SizedBox(
-                width: 450,
-                child: Text(
-                  "i have read the Privasy policy",
-                  style: MyTextStyle.myIHaveTextStyle,
-                ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.8,
+                    child: Row(
+                      children: [
+                        Text(
+                          "i have read the ",
+                          style: MyTextStyle.myIHaveTextStyle,
+                        ),
+                        Text(
+                          "Privasy policy",
+                          style: MyTextStyle.myPrivasyTextStyle,
+                        ),
+                      ],
+                    ),
+                  ),
+                  Checkbox(
+                      value: _check,
+                      onChanged: (status) {
+                        setState(() {
+                          _check = !_check;
+                        });
+                      })
+                ],
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 33),
+              padding: const EdgeInsets.only(top: 29),
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   fixedSize: const Size(450, 63),
@@ -180,7 +202,14 @@ class _SignUpState extends State<SignUp> {
                   "GET STARTED",
                   style: MyTextStyle.myGetStartedTextStyle,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  if (_formkey.currentState!.validate()) {
+                    Model.name = _usernameController.text.trim();
+                    Model.email = _emailController.text.trim();
+                    Model.password = _passwordController.text.trim();
+                    Navigator.pushReplacementNamed(context, '/sign_in');
+                  }
+                },
               ),
             ),
           ],

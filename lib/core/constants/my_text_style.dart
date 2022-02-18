@@ -31,4 +31,26 @@ class MyTextStyle {
         fontSize: 14,
         color: ColorConst.iHaveTextStyleColor,
       );
+
+  static get myPrivasyTextStyle => TextStyle(
+        fontSize: 14,
+        color: ColorConst.privasyTextStyleColor,
+      );
+
+  static get myfirstPageTextStyle => TextStyle(
+        fontSize: 30,
+        color: ColorConst.kPrimaryColor,
+      );
+
+  static get myMenuTextStyle => TextStyle(
+        fontSize: 20,
+        fontWeight: FontWeight.bold,
+        color: ColorConst.HeloAdminTextStyleColor,
+      );
+
+  static get myHeloAdminTextStyle => TextStyle(
+        fontSize: 28,
+        fontWeight: FontWeight.bold,
+        color: ColorConst.HeloAdminTextStyleColor,
+      );
 }
