@@ -1,21 +1,22 @@
-import 'package:exam/screens/my_home_page.dart';
+import 'package:exam/route/my_routes.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  MyApp({Key? key}) : super(key: key);
+
+  final MyRoute _myRoute = MyRoute();
 
   @override
   Widget build(BuildContext context) {
+   
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(),
+      onGenerateRoute: _myRoute.onGenerateRoute,
+      initialRoute: '/sign_in',
     );
   }
 }
