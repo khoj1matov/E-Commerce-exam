@@ -1,16 +1,20 @@
-# exam
+# agro_exam
 
-A new Flutter project.
+Farm uchun ilova 
+5 ta sahifadan iborat Screenshootlar:
 
 ## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<p>
+<img src = "./Screenshots/Screenshot_1.jpg" alt="Page1 Screen" width="45%">
+<img src = "./Screenshots/Screenshot_2.jpg" alt="Page2 Screen" width="45%">
+</p>
+<p>
+<img src = "./Screenshots/Screenshot_3.jpg" alt="Page3 Screen" width="45%">
+</p>
+<p>
+<img src = "./Screenshots/Screenshot_4.jpg" alt="Page4 Screen" width="45%">
+</p>
+<p>
+<img src = "./Screenshots/Screenshot_5.jpg" alt="Page5-1 Screen" width="45%">
+<img src = "./Screenshots/Screenshot_6.jpg" alt="Page5-2 Screen" width="45%">
+</p>

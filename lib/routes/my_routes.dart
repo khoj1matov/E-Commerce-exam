@@ -16,10 +16,10 @@ class MyRoute {
       //   return MaterialPageRoute(builder: (_) => const SignUp());
       // case '/sign_in':
       //   return MaterialPageRoute(builder: (_) => const SignIn());
-      case '/menu':
-        return MaterialPageRoute(builder: (_) => const MenuPage());
-      // case '/editbarang':
-      //   return MaterialPageRoute(builder: (_) => const EditBarang());
+      // case '/menu':
+      //   return MaterialPageRoute(builder: (_) => const MenuPage());
+      case '/editbarang':
+        return MaterialPageRoute(builder: (_) => const EditBarang());
     }
   }
 }
