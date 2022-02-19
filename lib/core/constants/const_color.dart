@@ -31,5 +31,6 @@ class ColorConst {
   static Color flashFruitsColor = const Color(0XFF53B175);
   static Color cokingOilColor = const Color(0XFFF8A44C);
   static Color simpanColor = const Color(0XFF6872EB);
+  static Color circleAvatarColor = const Color(0XFF4C55BB);
   static Color rpColor = Color.fromARGB(255, 206, 209, 197);
 }
