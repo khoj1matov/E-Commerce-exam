@@ -1,4 +1,4 @@
-import 'package:exam/route/my_routes.dart';
+import 'package:exam/routes/my_routes.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       onGenerateRoute: _myRoute.onGenerateRoute,
-      initialRoute: '/',
+      initialRoute: '/menu',
     );
   }
 }

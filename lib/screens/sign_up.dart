@@ -2,7 +2,7 @@ import 'package:exam/core/constants/const_color.dart';
 import 'package:exam/core/constants/font_const.dart';
 import 'package:exam/core/constants/my_text_style.dart';
 import 'package:flutter/material.dart';
-import '../mock/model.dart';
+import '../mock/data.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({Key? key}) : super(key: key);
@@ -204,9 +204,9 @@ class _SignUpState extends State<SignUp> {
                 ),
                 onPressed: () {
                   if (_formkey.currentState!.validate()) {
-                    Model.name = _usernameController.text.trim();
-                    Model.email = _emailController.text.trim();
-                    Model.password = _passwordController.text.trim();
+                    UserModel.name = _usernameController.text.trim();
+                    UserModel.email = _emailController.text.trim();
+                    UserModel.password = _passwordController.text.trim();
                     Navigator.pushReplacementNamed(context, '/sign_in');
                   }
                 },

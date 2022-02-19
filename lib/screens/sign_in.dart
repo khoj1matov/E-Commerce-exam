@@ -1,7 +1,7 @@
 import 'package:exam/core/constants/const_color.dart';
 import 'package:exam/core/constants/font_const.dart';
 import 'package:exam/core/constants/my_text_style.dart';
-import 'package:exam/mock/model.dart';
+import 'package:exam/mock/data.dart';
 import 'package:flutter/material.dart';
 import '../widgets/mymessenger.dart';
 
@@ -195,8 +195,8 @@ class _SignInState extends State<SignIn> {
   }
 
   signIn() {
-    if (Model.email == _emailController.text) {
-      if (Model.password == _passwordController.text) {
+    if (UserModel.email == _emailController.text) {
+      if (UserModel.password == _passwordController.text) {
         Navigator.pushReplacementNamed(context, '/menu');
         return true;
       }
